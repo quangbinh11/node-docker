@@ -42,6 +42,10 @@ docker exec -it node-docker_redis_1 redis-cli
 
 docker-compose -f .\docker-compose.yaml -f .\docker-compose.dev.yml up -d --scale node-app=2
 
+docker-compose -f .\docker-compose.yaml -f .\docker-compose.dev.yml up -d --build node-app
+
+docker-compose -f .\docker-compose.yaml -f .\docker-compose.dev.yml up -d --build --no-deps node-app
+
 
 
 
